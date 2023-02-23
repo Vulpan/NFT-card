@@ -1,0 +1,224 @@
+/// Main Styles File
+/// Here we import all the global Styles files we need for our project.
+
+@import "styles/normalize.scss";
+@import "styles/root.scss";
+@import "styles/fonts.scss";
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--color-background);
+  display: flex;
+  justify-content: center;
+}
+
+.nft-card {
+  max-width: 413px;
+  margin-top: 127px;
+
+  @include tablet() {
+    max-width: 343px;
+  }
+
+  @include mobile() {
+    max-width: 343px;    
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+.nft-card-component {  
+  background-color: var(--color-primary);
+  border-radius: 20px;  
+
+  #{&}__main {
+    border-radius: 20px;  
+    max-width: 100%;
+    height: auto;
+    background: linear-gradient(180deg, rgba(19, 36, 59, 0) 0%, rgba(19, 36, 59, 0.74) 61.98%, #13243B 100%), url("../../public/images/nft-image.png"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #{&}__content {
+    padding: 0 32px 24px 32px;
+  }
+
+  #{&}__information-component {
+    display: flex;
+    flex-direction: column;
+    margin-left: 32px;
+    margin-right: 100px;
+    padding-top: 252px;    
+  }
+
+  #{&}__title {    
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    @include semibold24();
+    color: var(--color-text-primary);
+  }
+
+  #{&}__information {    
+    @include medium18();
+    color: var(--color-text-secondary);    
+    margin-top: 24px;
+  }
+
+  #{&}__currency-component {    
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+
+  #{&}__currency-container {    
+    display: flex;
+    @include bold18();
+    color: var(--color-currency);    
+    gap: 10px;
+    align-items: center;
+  }
+
+  #{&}__currency-image {
+    display: flex;
+    align-items: center;
+  }
+
+  #{&}__time-container {    
+    display: flex;
+    color: var(--color-text-secondary);
+    gap: 10px;
+    margin-top: 4px;
+  }
+
+  #{&}__divider {    
+    border: 1.5px solid var(--color-stroke);
+    margin-top: 32px;
+    margin-bottom: 23px;
+  }
+
+  #{&}__user-container {    
+    display: flex;    
+    align-items: center;
+  }
+
+  #{&}__user-image {    
+    width: 40px;  
+    height: 40px;  
+  }
+
+  #{&}__created-by-container {    
+    display: flex;
+    margin-left: 16px;
+  }
+
+  #{&}__creation-of {   
+    @include medium16();  
+    color: var(--color-text-secondary);  
+  }
+
+  #{&}__username {    
+    @include semibold16();
+    color: var(--color-text-primary); 
+  }
+
+  @include tablet() {    
+    #{&}__main {
+      background-repeat: no-repeat;
+      background-size: 121%;
+      background-position: top;  
+    }  
+
+    #{&}__content {
+      padding: 0 24px 20px 24px;    
+    }
+
+    #{&}__information-component {
+      margin-left: 24px;
+      margin-right: 68px;
+      padding-top: 229px;
+    }
+
+    #{&}__information { 
+      margin-top: 16px;
+    }
+
+    #{&}__currency-component {    
+      margin-top: 24px;
+    }
+  
+    #{&}__currency-container {
+      @include bold16();
+    }
+  
+    #{&}__time {
+      @include medium14();
+      margin-right: 33px - 24px;
+    }
+
+    #{&}__divider {    
+      border: 1.5px solid var(--color-stroke);
+      margin-top: 20px;
+      margin-bottom: 18px;
+    }
+
+    #{&}__creation-of {   
+      @include medium14();  
+    }
+  
+    #{&}__username {    
+      @include semibold14(); 
+    }
+  }
+
+  @include mobile() {
+    #{&}__main {
+      background-repeat: no-repeat;
+      background-size: 121%;
+      background-position: top;  
+    }  
+
+    #{&}__content {
+      padding: 0 24px 20px 24px;    
+    }
+
+    #{&}__information-component {
+      margin-left: 24px;
+      margin-right: 68px;
+      padding-top: 229px;
+    }
+
+    #{&}__information { 
+      margin-top: 16px;
+    }
+
+    #{&}__currency-component {    
+      margin-top: 24px;
+    }
+  
+    #{&}__currency-container {
+      @include bold16();
+    }
+  
+    #{&}__time {
+      @include medium14();
+      margin-right: 33px - 24px;
+    }
+
+    #{&}__divider {    
+      border: 1.5px solid var(--color-stroke);
+      margin-top: 20px;
+      margin-bottom: 18px;
+    }
+
+    #{&}__creation-of {   
+      @include medium14();  
+    }
+  
+    #{&}__username {    
+      @include semibold14(); 
+    }
+  }
+}
